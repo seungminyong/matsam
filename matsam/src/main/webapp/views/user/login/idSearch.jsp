@@ -10,22 +10,22 @@
 
     <!-- Favicons -->
     
-    <link href="<c:url value="/assets/img/favicon.png"/>" rel="icon">
-    <link href="<c:url value="/assets/img/apple-touch-icon.png"/>" rel="apple-touch-icon">
+    <link href="<c:url value="/user_assets/img/favicon.png"/>" rel="icon">
+    <link href="<c:url value="/user_assets/img/apple-touch-icon.png"/>" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="<c:url value="/assets/vendor/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/assets/vendor/icofont/icofont.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/assets/vendor/boxicons/css/boxicons.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/assets/vendor/animate.css/animate.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/assets/vendor/owl.carousel/assets/owl.carousel.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/assets/vendor/venobox/venobox.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/vendor/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/vendor/icofont/icofont.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/vendor/boxicons/css/boxicons.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/vendor/animate.css/animate.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/vendor/owl.carousel/assets/owl.carousel.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/vendor/venobox/venobox.css"/>" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="<c:url value="/assets/css/login.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/css/login.css"/>" rel="stylesheet">
 
 </head>
 <body>
@@ -38,10 +38,10 @@
             <form method="post">
                 <div class="form-row">
                     <div class="col-md-12">
-                        <input type="text" name="name" class="form-control form-control-lg flat-input" placeholder="이름을 입력하세요">
+                        <input type="text" name="userName" class="form-control form-control-lg flat-input" placeholder="이름을 입력하세요">
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="phone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
+                        <input type="text" name="userPhone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
                     </div>
                     <input type="submit" class="btn btn-lg btn-block btn-login" value="아이디 찾기"></button>
                 </div>
@@ -55,19 +55,19 @@
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/vendor/counterup/counterup.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="user_assets/vendor/jquery/jquery.min.js"></script>
+<script src="user_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="user_assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="user_assets/vendor/php-email-form/validate.js"></script>
+<script src="user_assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="user_assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="user_assets/vendor/counterup/counterup.min.js"></script>
+<script src="user_assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="user_assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="user_assets/vendor/venobox/venobox.min.js"></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="user_assets/js/main.js"></script>
 
 
 </body></html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.user.service.impl.UserMapper">
+
+
+    <select id="loginReg" resultType="com.user.entity.UserVO"  parameterType="com.user.entity.UserVO">
+		SELECT *
+		FROM 	USER_TB
+		WHERE 	USER_EMAIL = #{userEmail} and USER_PASSWORD = #{userPassword}
+	</select>
+	
+	<select id="idCheck" resultType="java.lang.Integer" parameterType="java.lang.String">   
+        select count(USER_EMAIL) from USER_TB where USER_EMAIL = #{userName}
+    </select>
+    
+    <select id="nicknameCheck" resultType="java.lang.Integer" parameterType="java.lang.String"> 
+    
+        select count(user_nicname)
+		from USER_TB
+		where user_nicname = #{userNicName}
+    
+    </select> 
+    
+    <insert id="join" parameterType="com.user.entity.UserVO" >   
+     	insert into USER_TB(
+     	USER_SERIAL_NO,
+     	USER_EMAIL,
+     	USER_PASSWORD,
+     	USER_PHONE,
+     	user_nicname,
+     	USER_NAME,
+     	USER_YN,
+     	USER_GRADE_CD,
+     	REG_DATE
+     	) values (
+     	#{userSerialNo},
+     	#{userName},
+     	#{userPassword},
+     	#{userPhone},
+     	#{userNicName},
+     	#{userName},
+     	#{userYn},
+     	#{userGradeCd}
+     	,sysdate)
+    </insert> 
+    
+    <insert id="joinOwner" parameterType="com.user.entity.UserVO" >   
+     	insert into MANAGER(MANAGER_SERIAL_NO,license_number,license_resname,license_address)
+    		values(#{userSerialNo},#{license_number},#{license_resname},#{license_address})
+    </insert>
+    
+    <select id="list" resultType="com.user.entity.UserVO" parameterType="java.lang.String"> 
+		select * from USER_TB where user_name=#{userName}
+	</select>
+
+    <update id="modifyReg" parameterType="com.user.entity.UserVO"> 
+		update USER_TB
+		set user_phone = #{userPhone}
+		 where user_name = #{userName}
+	</update>
+      
+    <delete id ="deleteReg" parameterType="com.user.entity.UserVO">
+		delete from USER_TB
+		where user_name = #{userEmail}
+		and USER_PASSWORD = #{userPassword}
+	</delete>
+	
+	<select id="idSearchReg" resultType="com.user.entity.UserVO"  parameterType="com.user.entity.UserVO">
+			SELECT * FROM USER_TB
+			WHERE USER_NAME = #{userName} and USER_PHONE = #{userPhone}
+	</select>  
+
+	<select id="idSearchReg" resultType="com.user.entity.UserVO"  parameterType="com.user.entity.UserVO">
+		SELECT * FROM USER_TB WHERE user_name=#{userName} and user_phone = #{userPhone}
+	</select>
+	
+	<select id="resSearch" resultType="com.resjoin.entity.ResjoinVO"  parameterType="java.lang.String">
+		SELECT * FROM MANAGE_TB where LOCATION like '%'||#{keyword}||'%' OR RESNAME like '%'||#{keyword}||'%'
+	</select>
+	
+	<update id="idModify" parameterType="com.user.entity.UserVO">
+		update USER_TB set USER_PASSWORD = #{userPassword} where user_name =#{userName}
+	</update>
+	   
+	<select id="nicknameModify" resultType="java.lang.Integer" parameterType="java.lang.String"> 
+		select count(user_nicname) from USER_TB where user_nicname = #{userNicName}
+	</select>
+	   
+	<update id="nicknameModifyReg" parameterType="com.user.entity.UserAuth"> 
+		update USER_TB set user_nicname = #{userNicName} where user_name = #{userName}
+	</update>
+</mapper>
