@@ -7,9 +7,9 @@
     <!-- Required meta tags -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+      
     <!-- Favicons -->
-    
+       
     <link href="<c:url value="/user_assets/img/favicon.png"/>" rel="icon">
     <link href="<c:url value="/user_assets/img/apple-touch-icon.png"/>" rel="apple-touch-icon">
 
@@ -26,10 +26,10 @@
 
     <!-- Template Main CSS File -->
     <link href="<c:url value="/user_assets/css/login.css"/>" rel="stylesheet">
-
+     
 </head>
 <body>
-<!-- Container -->
+<!-- Container -->   
 <div class="container">
     <div class="row justify-content-md-center">
 
