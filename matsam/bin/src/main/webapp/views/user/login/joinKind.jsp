@@ -10,14 +10,14 @@
 
     <!-- Favicons -->
     
-    <link href="<c:url value="/assets/img/favicon.png"/>" rel="icon">
-    <link href="<c:url value="/assets/img/apple-touch-icon.png"/>" rel="apple-touch-icon">
+    <link href="<c:url value="/user_assets/img/favicon.png"/>" rel="icon">
+    <link href="<c:url value="/user_assets/img/apple-touch-icon.png"/>" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="<c:url value="/assets/vendor/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/vendor/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/assets/vendor/icofont/icofont.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/assets/vendor/boxicons/css/boxicons.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/assets/vendor/animate.css/animate.min.css"/>" rel="stylesheet">
@@ -58,7 +58,7 @@
 <script src="assets/vendor/venobox/venobox.min.js"></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="<c:url value="/user_assets/js/main.js"/>"></script>
 
 
 </body></html>

@@ -278,7 +278,7 @@ function auto(){
         <div>
             <h3 class="join_title"><label for="email">이메일</label></h3>
             <span class="box int_email" id="emailbox">
-                        <input type="text" id="email" name="email" class="int" maxlength="100" placeholder="이메일 형식으로 입력해주세요" onkeyup="registeridCheckFunction()" autocomplete="off"/>
+                        <input type="text" id="email" name="userEmail" class="int" maxlength="100" placeholder="이메일 형식으로 입력해주세요" onkeyup="registeridCheckFunction()" autocomplete="off"/>
                     </span>
             <h5 class="error_next_box" id="idCheckMessage"></h5>
         </div>
@@ -288,7 +288,7 @@ function auto(){
         <div>
             <h3 class="join_title"><label for="password">비밀번호</label></h3>
             <span class="box int_pass" id="passwordbox">
-                        <input type="password" class="int" maxlength="20" placeholder="8 ~ 20자 영문, 숫자 조합" name="password" id="password"   onkeyup="passwordCheckFunction()" />
+                        <input type="password" class="int" maxlength="20" placeholder="8 ~ 20자 영문, 숫자 조합" name="userPassword" id="password"   onkeyup="passwordCheckFunction()" />
                     </span>
         </div>
 
@@ -316,7 +316,7 @@ function auto(){
         <div>
             <h3 class="join_title"><label for="name">이름</label></h3>
             <span class="box int_name" id="namebox">
-                        <input type="text" id="name" name="name" class="int" maxlength="20" onkeyup="nameCheckFunction()" placeholder="이름을 입력하세요">
+                        <input type="text" id="name" name= class="int" maxlength="20" onkeyup="nameCheckFunction()" placeholder="이름을 입력하세요">
                     </span>
             <span class="error_next_box" id="nameCheckMessage"></span>
         </div>
@@ -325,7 +325,7 @@ function auto(){
         <div>
             <h3 class="join_title"><label for="phone">핸드폰 번호</label></h3>
             <span class="box int_mobile" id="phonebox">
-                        <input type="tel" id="phone" name="phone" class="int" maxlength="16" placeholder="인증하기 버튼을 통해 인증받으세요" onkeyup...000="phoneCheckFunction()" readonly="readonly">
+                        <input type="tel" id="phone" name="userPhone" class="int" maxlength="16" placeholder="인증하기 버튼을 통해 인증받으세요" onkeyup...000="phoneCheckFunction()" readonly="readonly">
                     </span>
         </div>              
          <button type="button" class="btn btn-lg btn-block btn-login" onclick="auto()" >인증하기</button>   

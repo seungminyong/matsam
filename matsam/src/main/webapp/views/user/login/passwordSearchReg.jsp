@@ -47,8 +47,8 @@
                     </div>
                     <div class="col-md-12">
                     <c:choose>
-                    	<c:when test="${data.password !=null }">
-                    	<h2>고객님의 pw는 ${data.password} 입니다.</h2>
+                    	<c:when test="${data.userPassword !=null }">
+                    	<h2>고객님의 pw는 ${data.userPassword} 입니다.</h2>
                     	</c:when>
                     	<c:otherwise>
                     	<h2>존재하지 않는 회원정보입니다.</h2>                    	
@@ -80,7 +80,7 @@
 <script src="<c:url value="/user_assets/vendor/venobox/venobox.min.js"/>"></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="<c:url value="/user_assets/js/main.js"/>"></script>
 
 
 </body></html>

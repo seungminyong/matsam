@@ -50,15 +50,15 @@
             <form method="post">
                 <div class="form-row">
                     <div class="col-md-12">
-                        <input type="text" name="email" class="form-control form-control-lg flat-input" placeholder="username" id="email">
+                        <input type="text" name="userEmail" class="form-control form-control-lg flat-input" placeholder="username" id="email">
                     </div>
                     <div class="col-md-12">
-                        <input type="password" name="password" class="form-control form-control-lg flat-input" placeholder="password" id="password">
+                        <input type="password" name="userPassword" class="form-control form-control-lg flat-input" placeholder="password" id="password">
                     </div>
                     <div>
                         <a href="" onclick="idSearch()">아이디 찾기</a> |
                         <a href="" onclick="passwordSearch()">비밀번호 찾기</a> |
-                        <a href="">회원가입</a> |
+                        <a href="<c:url value="/user/join"/>">회원가입</a> |
                     </div>
                     <button type="submit" class="btn btn-lg btn-block btn-login">Login</button>
                 </div>
@@ -72,19 +72,19 @@
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/vendor/counterup/counterup.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="<c:url value="/user_assets/vendor/jquery/jquery.min.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/jquery.easing/jquery.easing.min.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/php-email-form/validate.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/jquery-sticky/jquery.sticky.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/waypoints/jquery.waypoints.min.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/counterup/counterup.min.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/isotope-layout/isotope.pkgd.min.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/owl.carousel/owl.carousel.min.js"/>"></script>
+<script src="<c:url value="/user_assets/vendor/venobox/venobox.min.js"/>"></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="<c:url value="/user_assets/js/main.js"/>"></script>
 
 
 </body></html>

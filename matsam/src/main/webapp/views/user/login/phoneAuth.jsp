@@ -78,7 +78,7 @@
                     <div class="form-row">
                     <div class="col-md-12">
                      <span class="box int_mobile" id="phonebox">
-                        <input type="text" id="phone" name="phone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
+                        <input type="text" id="phone" name="userPhone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
                            </span>
                           <span class="error_next_box" id="phoneCheckMessage"></span> 
                     </div>
@@ -114,7 +114,7 @@
 <script src="<c:url value="/user_assets/vendor/venobox/venobox.min.js"/>"></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="<c:url value="/user_assets/js/main.js"/>"></script>
 
 
 </body></html>

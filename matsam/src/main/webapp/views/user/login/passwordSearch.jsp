@@ -78,7 +78,7 @@ var phoneCheck = false;
             <h1 class="text-center wdi-red">비밀번호 찾기</h1>
                     <div class="form-row">
                     <div class="col-md-12">
-                        <input type="text" id="phone" name="phone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
+                        <input type="text" id="phone" name="userPhone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
                     </div>
                    <div class="col-md-12">
                         <button type="button" class="btn btn-lg btn-block btn-login" id="authButton" onclick="auto()" >인증하기</button>
@@ -91,7 +91,7 @@ var phoneCheck = false;
                    <button type="button" class="btn btn-lg btn-block btn-login" id="cerButton">인증확인</button>
                 	</div>
                 	<div class="col-md-12">
-                        <input type="text" name="email" class="form-control form-control-lg flat-input" placeholder="이메일을 입력하세요">
+                        <input type="text" name="userEmail" class="form-control form-control-lg flat-input" placeholder="이메일을 입력하세요">
                     </div>
                     <div class="col-md-12">
                    	<input type="submit" class="btn btn-lg btn-block btn-login" value="비밀번호 찾기" />

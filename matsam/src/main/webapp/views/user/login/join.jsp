@@ -57,7 +57,7 @@
 	if(emailRegex.test(emailValue)){			
 		$.ajax({
 		type: 'get',
-		url: 'idCheck?email='+emailValue,
+		url: 'idCheck?userEmail='+emailValue,
 		success: function(result){
 			if(result == 0){
 				$('#alertTxt').show(); 
@@ -88,7 +88,7 @@
 	if(nicknameRegex.test(nicknameValue)){			
 		$.ajax({
 		type: 'get',
-		url: 'nicknameCheck?nickname='+nicknameValue,
+		url: 'nicknameCheck?userNicName='+nicknameValue,
 		success: function(result){
 			console.log(result);
 			if(result == 0){
@@ -157,10 +157,12 @@
 		var phoneRegex = /^\d{10,11}$/;
 		  if(phoneRegex.test(phone)){
 			  $('#phonebox').css('border','1px solid green');
+              console.log("TRUE" + phone);
 			  phoneval =true;
 			  }else{
 				  $('#phonebox').css('border','1px solid green');
 				  phoneval =false;
+				  console.log("FALSE" + phone);
 				}
 		}
 
@@ -205,7 +207,7 @@
         <div>
             <h3 class="join_title"><label for="email">이메일</label></h3>
             <span class="box int_email" id="emailbox">
-                        <input type="text" id="email" name="email" class="int" maxlength="100" placeholder="이메일 형식으로 입력해주세요" onkeyup="registeridCheckFunction()" autocomplete="off" />
+                        <input type="text" id="email" name="userEmail" class="int" maxlength="100" placeholder="이메일 형식으로 입력해주세요" onkeyup="registeridCheckFunction()" autocomplete="off" />
                     </span>
             <h5 class="error_next_box" id="idCheckMessage"></h5>
         </div>
@@ -215,7 +217,7 @@
         <div>
             <h3 class="join_title"><label for="password">비밀번호</label></h3>
             <span class="box int_pass" id="passwordbox">
-                        <input type="password" class="int" maxlength="20" placeholder="8 ~ 20자 영문, 숫자 조합" name="password" id="password"   onkeyup="passwordCheckFunction()" />
+                        <input type="password" class="int" maxlength="20" placeholder="8 ~ 20자 영문, 숫자 조합" name="userPassword" id="password"   onkeyup="passwordCheckFunction()" />
                     </span>
         </div>
 
@@ -233,7 +235,7 @@
         <div>
             <h3 class="join_title"><label for="phone">핸드폰 번호</label></h3>
             <span class="box int_mobile" id="phonebox">
-                        <input type="tel" id="phone" name="phone" class="int" maxlength="16" placeholder="인증하기 버튼을 통해 인증받으세요" onchange="phoneCheckFunction()" readonly="readonly">
+                        <input type="tel" id="phone" name="userPhone" class="int" maxlength="16" placeholder="인증하기 버튼을 통해 인증받으세요" onchange="phoneCheckFunction()" readonly="readonly">
                     </span>
         </div>              
          <button type="button" class="btn btn-lg btn-block btn-login" onclick="auto()" >인증하기</button>   
@@ -242,7 +244,7 @@
         <div>
             <h3 class="join_title"><label for="name">이름</label></h3>
             <span class="box int_name" id="namebox">
-                        <input type="text" id="name" name="name" class="int" maxlength="20" onkeyup="nameCheckFunction()" placeholder="이름을 입력하세요">
+                        <input type="text" id="name" name="userName" class="int" maxlength="20" onkeyup="nameCheckFunction()" placeholder="이름을 입력하세요">
                     </span>
             <span class="error_next_box"></span>
         </div>
