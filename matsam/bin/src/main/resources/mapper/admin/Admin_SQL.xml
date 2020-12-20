@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.matsam.admin.service.impl.AdminMapper">
+    <insert id="insert" parameterType="kr.or.matsam.admin.entity.AdminVO">
+        INSERT INTO user_tb (
+            user_serial_no,
+            user_grade_cd,
+            user_email,
+            user_password,
+            user_phone,
+            user_name,
+            reg_date
+        ) VALUES (
+            #{admConno},
+            'ADMIN',
+            #{admId},
+            #{admPassword},
+            #{admPhone},
+            #{admName},
+            sysdate
+        )
+    </insert>
+
+    <select id="checkId" resultType="kr.or.matsam.admin.entity.AdminVO">
+        SELECT   user_serial_no as admConno,
+                 user_email     as admId,
+                 user_password  as admPassword,
+                 user_phone     as admPhone,
+                 user_name      as admName,
+                 reg_date
+        FROM    USER_TB
+        WHERE   user_grade_cd = 'ADMIN' and user_email = #{admId}
+    </select>
+
+    <select id="listAll" resultType="kr.or.matsam.admin.entity.AdminVO">
+        SELECT   user_serial_no as admConno,
+                 user_email     as admId,
+                 user_password  as admPassword,
+                 user_phone     as admPhone,
+                 user_name      as admName
+        FROM    USER_TB
+        WHERE   user_grade_cd = 'ADMIN'
+    </select>
+
+    <select id="detail" resultType="kr.or.matsam.admin.entity.AdminVO">
+        SELECT   user_serial_no as admConno,
+                 user_email     as admId,
+                 user_password  as admPassword,
+                 user_phone     as admPhone,
+                 user_name      as admName,
+        FROM     USER_TB
+        WHERE    user_grade_cd = 'ADMIN' and user_serial_no = #{admConno}
+    </select>
+</mapper>

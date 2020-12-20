@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+
+<mapper namespace="com.user.service.impl.UserMapper">
+
+
+    <select id="loginReg" resultType="com.user.entity.UserVO"  parameterType="com.user.entity.UserVO">
+		SELECT * FROM USER_TB WHERE EMAIL=#{email} and password=#{password}
+	</select>
+	
+	<select id="idCheck" resultType="java.lang.Integer" parameterType="java.lang.String">   
+        select count(EMAIL) from USER_TB where EMAIL=#{email}
+    </select>
+    
+    <select id="nicknameCheck" resultType="java.lang.Integer" parameterType="java.lang.String"> 
+    
+        select count(NICKNAME) from USER_TB where NICKNAME=#{nickname}
+    
+    </select> 
+    
+    <insert id="join" parameterType="com.user.entity.UserVO" >   
+     	insert into USER_TB(USER_SERIAL_NO,EMAIL,PASSWORD,PHONE,NICKNAME,NAME,USER_YN,grade_cd,REG_DATE)
+    		values(USER_SERIAL_NO.NEXTVAL,#{email},#{password},#{phone},#{nickname},#{name},#{user_yn},#{grade_cd},sysdate)       
+    </insert> 
+    
+    <insert id="joinOwner" parameterType="com.user.entity.UserVO" >   
+     	insert into MANAGER(MANAGER_SERIAL_NO,license_number,license_resname,license_address)
+    		values(USER_SERIAL_NO.CURRVAL,#{license_number},#{license_resname},#{license_address})       
+    </insert>
+    
+    <select id="list" resultType="com.user.entity.UserVO" parameterType="java.lang.String"> 
+		select * from USER_TB where email=#{email}
+	</select>
+
+    <update id="modifyReg" parameterType="com.user.entity.UserVO"> 
+		update USER_TB set phone = #{phone} where email =#{email}
+	</update>
+      
+    <delete id ="deleteReg" parameterType="com.user.entity.UserVO">
+		delete from USER_TB where email = #{email} and password = #{password}
+	</delete>
+	
+	<select id="idSearchReg" resultType="com.user.entity.UserVO"  parameterType="com.user.entity.UserVO">
+		SELECT * FROM USER_TB WHERE NAME=#{name} and PHONE=#{phone}
+	</select>  
+</mapper>

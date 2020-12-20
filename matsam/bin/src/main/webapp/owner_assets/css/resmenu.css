@@ -1,0 +1,297 @@
+/* ë ˆì´ì•„ì›ƒ í‹€ */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: #fff;
+}
+
+label{
+    margin : 0px;
+}
+
+#logo {
+    width: 240px;
+    height: 44px;
+    cursor: pointer;
+}
+
+#header {
+    padding-top: 62px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#wrapper {
+    position: relative;
+    height: 100%;
+}
+
+#content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 460px;
+}
+
+.joinmenu {
+   width: 500px;
+   height: 580px;
+   margin: 0 auto;
+   padding: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+  
+}
+
+.addedmenu{
+	
+	width: 500px;
+   height: 560px;
+   margin: 0 auto;
+   padding: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+   margin-bottom: 50px;
+}
+
+
+/* ìž…ë ¥í¼ */
+
+
+h3 {
+    margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.box {
+    display: block;
+    width: 100%;
+    height: 51px;
+    border : 1px solid #333;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+}
+
+.menu_explain{
+	
+	display: block;
+    width: 100%;
+    height: 200px;
+    border : 1px solid #333;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+	
+}
+
+.inmenu{
+	
+	display: block;
+    width: 100%;
+    height: 200px;
+    border : 1px solid #333;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+	
+}
+
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+}
+
+input {
+
+}
+
+.box.int_id {
+    padding-right: 110px;
+}
+
+.box.int_pass {
+    padding-right: 40px;
+}
+
+.box.int_pass_check {
+    padding-right: 40px;
+}
+
+.step_url {
+    /*@naver.com*/
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 15px;
+    color: #8e8e8e;
+}
+
+.pswdImg {
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+#bir_wrap {
+    display: table;
+    width: 100%;
+}
+
+#bir_yy {
+    display: table-cell;
+    width: 147px;
+
+}
+
+#bir_mm {
+    display: table-cell;
+    width: 147px;
+    vertical-align: middle;
+}
+
+#bir_dd {
+    display: table-cell;
+    width: 147px;
+}
+
+#bir_yy, #bir_dd {
+    padding-left: 10px;
+}
+
+input[type=checkbox]{
+	width: 30px;
+	margin-right: 3px;
+	margin-top: 15px;
+	float: left;
+}
+
+input[id="parking"] + label,
+input[id="kidzone"] + label,
+input[id="smoking"] + label
+{
+
+	height: 30px;
+	border: 2px solid #bcbcbc;
+	
+}
+input[id="parking"]:checked + label,
+input[id="kidzone"]:checked + label,
+input[id="smoking"]:checked + label
+{
+	background-color: #666666;
+}
+input[id="parking"],
+input[id="kidzone"],
+input[id="smoking"]
+{
+	display: none;
+}
+
+label[for="parking"] , 
+label[for="kidzone"] ,
+label[for="smoking"] {
+
+	float: left;
+	margin: 0px 50px 0px 0px;
+}
+
+select {
+    width: 100%;
+    height: 29px;
+    font-size: 15px;
+    background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
+    background-size: 20px 8px;
+    -webkit-appearance: none;
+    display: inline-block;
+    text-align: start;
+    border: none;
+    cursor: default;
+}
+
+/* ì—ëŸ¬ë©”ì„¸ì§€ */
+
+.error_next_box {
+    margin-top: 9px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+#alertTxt {
+    position: absolute;
+    top: 19px;
+    right: 38px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+/* ë²„íŠ¼ */
+
+.btn_area {
+    margin: 30px 0 91px;
+}
+
+#btnJoin
+ {
+    width: 500px;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#btnAdd
+ {
+    width: 100%;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#btnfin{
+	 width: 100%;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.join_title {
+    font-size : 17px;
+    margin : 0;
+    margin-top : 10px;
+    padding : 0px;
+}
+
+

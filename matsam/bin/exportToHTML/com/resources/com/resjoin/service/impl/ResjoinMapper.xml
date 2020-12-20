@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.resjoin.service.impl.ResjoinMapper">
+
+	<!-- 식당 아이디 중복 체크 -->
+	<select id="idChk" resultType="int">
+		Select count(*) form res
+		where resid = #{resid}
+	</select>
+
+
+	<insert id="add" parameterType="com.resjoin.entity.ResjoinVO">
+		insert into res
+		( resid,resname, location, localph, fph, fla, resprice, resexplain, twotable ,fourtable, manyptable, banner, innerimage,regdate,modifydate)
+		values
+		(#{resid},#{resname}, #{location}, #{localph},#{fph},#{fla},#{resprice},#{resexplain},#{twotable},#{fourtable},#{manyptable},#{bannerImageName},#{innerImageName},sysdate,sysdate)
+	
+	</insert>
+	
+	
+</mapper>

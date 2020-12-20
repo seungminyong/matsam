@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.matsam.manage.time.serivce.impl.TimeMapper">
+
+    <insert id="insert" parameterType="kr.or.matsam.manage.time.entity.TimeVO">
+        INSERT INTO RESER_TIME_TB(
+            RES_SERIAL_NO,
+            RES_TIME_START,
+            RES_TIME_END
+        ) VALUES (
+            #{resSerialNo},
+            #{resTimeStart},
+            #{resTimeEnd}
+        )
+    </insert>
+    <delete id="delete" parameterType="java.lang.String">
+        DELETE FROM RESER_TIME_TB
+        WHERE RES_SERIAL_NO = #{resSerialNo}
+    </delete>
+    <select id="listAll" resultType="kr.or.matsam.manage.tag.entity.TagVO" parameterType="java.lang.String">
+        SELECT  RES_SERIAL_NO,
+                RES_TIME_START,
+                RES_TIME_END
+        FROM    RESER_TIME_TB
+        WHERE   RES_SERIAL_NO = #{resSerialNo}
+    </select>
+</mapper>

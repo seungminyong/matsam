@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.matsam.reser.service.impl.ReserMapper">
+    <select id="getMaxNo" resultType="java.lang.String">
+        SELECT  max(reser_serial_num)
+        FROM    reser_tb
+    </select>
+    <insert id="insert" parameterType="kr.or.matsam.reser.entity.ReserVO">
+        INSERT INTO     reser_tb(
+        reser_serial_num,
+        store_serial_num,
+        user_serial_no,
+        user_name,
+        user_phone,
+        total_price,
+        reser_content,
+        reser_date,
+        reg_date
+        ) VALUES (
+        #{reserSerialNo},
+        #{storeSerialNo},
+        #{userSerialNo, jdbcType=VARCHAR},
+        #{userName},
+        #{userPhone},
+        #{totalPrice},
+        #{reserContent},
+        #{reserDate},
+        sysdate
+        )
+    </insert>
+    <update id="modify" parameterType="kr.or.matsam.reser.entity.ReserVO"></update>
+    <delete id="delete" parameterType="kr.or.matsam.reser.entity.ReserVO"></delete>
+    <select id="detail" resultType="kr.or.matsam.reser.entity.ReserVO" parameterType="java.lang.String"></select>
+    <select id="listAll" resultType="kr.or.matsam.reser.entity.ReserVO">
+        SELECT      reser_serial_num as reserSerialNo,
+                    store_serial_num as storeSerailNum,
+                    user_serial_no as userSerailNum,
+                    user_name as userName,
+                    user_phone as userPhone,
+                    total_price as totalPrice,
+                    reser_content as reserContent,
+                    reser_date as reserDate,
+                    reg_date as regDate
+        FROM        reser_tb
+    </select>
+</mapper>

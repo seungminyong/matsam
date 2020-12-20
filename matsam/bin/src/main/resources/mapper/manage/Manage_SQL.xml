@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.matsam.manage.service.impl.ManageMapper">
+    <insert id="insert" parameterType="kr.or.matsam.manage.entity.ManageVO">
+        INSERT INTO manage_tb (
+        RES_SERIAL_NO,
+        USER_SERIAL_NO,
+        RES_NAME,
+        RES_LOCATION,
+        RES_PHONE,
+        RES_PRICE,
+        RES_TWOTABLE,
+        RES_FOURTABLE,
+        RES_MAYTABLE,
+        RES_EXPLAIN,
+        REG_DATE
+        ) VALUES (
+        #{resSerialNo},
+        #{userSerialNo, jdbcType=VARCHAR},
+        #{resName},
+        #{resLocation},
+        #{resPhone},
+        #{resPrice},
+        #{resTwoTable},
+        #{resFourTable},
+        #{resMayTable},
+        #{resExplain},
+        sysdate
+        )
+    </insert>
+    <update id="modify" parameterType="kr.or.matsam.manage.entity.ManageVO">
+
+    </update>
+
+    <select id="listAll" resultType="kr.or.matsam.manage.entity.ManageVO">
+        SELECT      RES_SERIAL_NO,
+                    USER_SERIAL_NO,
+                    RES_NAME,
+                    RES_LOCATION,
+                    RES_PHONE,
+                    RES_PRICE,
+                    RES_TWOTABLE,
+                    RES_FOURTABLE,
+                    RES_MAYTABLE,
+                    RES_EXPLAIN,
+                    RES_REG_STATE,
+                    REG_DATE
+        FROM        MANAGE_TB
+
+    </select>
+    <select id="resDetail" resultType="kr.or.matsam.manage.entity.ManageVO" parameterType="java.lang.String">
+        SELECT      RES_SERIAL_NO,
+                    USER_SERIAL_NO,
+                    RES_NAME,
+                    RES_LOCATION,
+                    RES_PHONE,
+                    RES_PRICE,
+                    RES_TWOTABLE,
+                    RES_FOURTABLE,
+                    RES_MAYTABLE,
+                    RES_EXPLAIN,
+                    RES_REG_STATE,
+                    REG_DATE
+        FROM        MANAGE_TB
+        WHERE       USER_SERIAL_NO = #{user_serial_no}
+    </select>
+    <select id="getMaxNo" resultType="java.lang.String">
+        SELECT  MAX(RES_SERIAL_NO)
+        FROM    manage_tb
+    </select>
+</mapper>
+
