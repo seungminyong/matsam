@@ -39,7 +39,7 @@
 
     <!-- Template Main CSS File -->
  <link href="<c:url value="/user_assets/css/join.css"/>" rel="stylesheet">
-    <link href="<c:url value="/assets/css/login.css"/>" rel="stylesheet">
+    <link href="<c:url value="/user_assets/css/login.css"/>" rel="stylesheet">
 
 
 </head>
