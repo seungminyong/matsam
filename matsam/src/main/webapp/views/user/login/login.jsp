@@ -12,7 +12,7 @@
 
 	function passwordSearch(){
 		window.open('passwordSearch','비밀번호','width=500, height=600, toolbar=no, menubar=no, scrollbars=no, resizable=yes')
-		}
+		}     
 	     
 	</script>
     
