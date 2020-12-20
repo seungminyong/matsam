@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>메인페이지</title>
+
 <link href="<c:url value="/user_assets/css/styles.css" />"
 	rel="stylesheet" />
 

@@ -273,9 +273,18 @@ img{
 	<!-- 헤더시작 -->
 	<div class="header">
 		<!-- 로그인로고이미지 -->
-		<a href="" id="headerlogin"><img
+		<c:choose>
+		<c:when test="${userAuth == null}">
+		<a href="/user/login" id="headerlogin"><img
 			src="<c:url value="/views/images/login.png"/>" alt="" width="100px"
 			height="100px" /></a>
+		</c:when>
+		<c:otherwise>
+		<a href="/user/mypage" id="headerlogin"><img
+			src="<c:url value="/views/images/login.png"/>" alt="" width="100px"
+			height="100px" /></a>
+		</c:otherwise>
+		</c:choose>
 		<!-- 로고이미지 -->
 		<a href="" id="headerlogo"><img
 			src="<c:url value="/views/images/logo.jpg"/>" alt="" width="130px"
