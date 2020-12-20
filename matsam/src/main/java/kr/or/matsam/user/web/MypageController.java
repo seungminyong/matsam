@@ -1,8 +1,8 @@
 package kr.or.matsam.user.web;
 
-import com.user.entity.UserAuth;
-import com.user.entity.UserVO;
-import com.user.service.UserService;
+import kr.or.matsam.user.entity.UserAuth;
+import kr.or.matsam.user.entity.UserVO;
+import kr.or.matsam.user.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;

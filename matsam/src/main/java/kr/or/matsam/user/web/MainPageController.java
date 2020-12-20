@@ -1,7 +1,7 @@
 package kr.or.matsam.user.web;
 
-import com.resjoin.entity.ResjoinVO;
-import com.user.service.UserService;
+import kr.or.matsam.manage.entity.ManageVO;
+import kr.or.matsam.user.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,9 +30,9 @@ public class MainPageController {
 	  @RequestMapping(value="/main/main", method= RequestMethod.POST)
 	  public String resSearch(String keyword, Model mm) {
 		  System.out.println(keyword);
-		  List<ResjoinVO> resVO = userService.resSearch(keyword);
-		  System.out.println(resVO);
-		  mm.addAttribute("resList",resVO);
+		  List<ManageVO> manageVOList = userService.resSearch(keyword);
+		  System.out.println();
+		  mm.addAttribute("resList",manageVOList);
 	  return "main/main"; 
 		    }
 }

@@ -1,9 +1,9 @@
 package kr.or.matsam.user.service.impl;
 
-import com.resjoin.entity.ResjoinVO;
-import com.user.entity.UserAuth;
-import com.user.entity.UserVO;
-import com.user.service.UserService;
+import kr.or.matsam.manage.entity.ManageVO;
+import kr.or.matsam.user.entity.UserAuth;
+import kr.or.matsam.user.entity.UserVO;
+import kr.or.matsam.user.service.UserService;
 import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 import org.json.simple.JSONObject;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 	@Resource
 	private UserMapper mapper;
 	
@@ -101,7 +101,7 @@ public class UserServiceImpl implements UserService{
 	
 	
 	@Override
-	public List<ResjoinVO> resSearch(String keyword) {
+	public List<ManageVO> resSearch(String keyword) {
 		// TODO Auto-generated method stub
 		System.out.println(keyword);
 		return mapper.resSearch(keyword);

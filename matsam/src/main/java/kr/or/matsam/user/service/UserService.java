@@ -1,8 +1,8 @@
 package kr.or.matsam.user.service;
 
-import com.resjoin.entity.ResjoinVO;
-import com.user.entity.UserAuth;
-import com.user.entity.UserVO;
+import kr.or.matsam.manage.entity.ManageVO;
+import kr.or.matsam.user.entity.UserAuth;
+import kr.or.matsam.user.entity.UserVO;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public interface UserService {
 	void sendSMS(String userPhone, String authNum);
 	UserVO passwordSearchReg(UserVO userVO);
 	
-	List<ResjoinVO> resSearch(String keyword);
+	List<ManageVO> resSearch(String keyword);
 	void passwordModify(UserVO userVO);
 	int nicknameModify(String userNicName);
 	void nicknameModifyReg(UserAuth userAuth);

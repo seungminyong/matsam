@@ -1,8 +1,8 @@
 package kr.or.matsam.user.service.impl;
 
-import com.resjoin.entity.ResjoinVO;
-import com.user.entity.UserAuth;
-import com.user.entity.UserVO;
+import kr.or.matsam.manage.entity.ManageVO;
+import kr.or.matsam.user.entity.UserAuth;
+import kr.or.matsam.user.entity.UserVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public interface UserMapper {
 	UserVO idSearchReg(UserVO userVO);
 	void sendSMS(String phoner, String authNum);
 	UserVO passwordSearchReg(UserVO userVO);
-	List<ResjoinVO> resSearch(String keyword);
+	List<ManageVO> resSearch(String keyword);
 	void passwordModify(UserVO userVO);
 	int nicknameModify(String userNicName);
 	void nicknameModifyReg(UserAuth userAuth);
