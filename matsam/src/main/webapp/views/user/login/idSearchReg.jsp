@@ -47,8 +47,9 @@
                     </div>
                     <div class="col-md-12">
                     <c:choose>
-                    	<c:when test="${data.email !=null }">
-                    	<h2>고객님의 id는 ${data.email} 입니다.</h2>
+                    	<c:when test="${data.userEmail !=null }">
+                    	<h2>고객님의 id는 ${data.userEmail} 입니다.</h2>
+
                     	</c:when>
                     	<c:otherwise>
                     	<h2>존재하지 않는 회원정보입니다.</h2>                    	

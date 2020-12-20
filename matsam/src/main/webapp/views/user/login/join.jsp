@@ -251,7 +251,7 @@
         <div>
             <h3 class="join_title"><label for="nickname">닉네임</label></h3>
             <span class="box int_name" id="nicknamebox">
-                        <input type="text" id="nickname" name="nickname" class="int" maxlength="20" onkeyup="nicknameCheckFunction()" autocomplete="off" placeholder="2 ~ 20 글자로 입력 해주세요"/>
+                        <input type="text" id="nickname" name="userNicName" class="int" maxlength="20" onkeyup="nicknameCheckFunction()" autocomplete="off" placeholder="2 ~ 20 글자로 입력 해주세요"/>
                     </span>
             <span class="error_next_box" id="nicknameCheckMessage"></span>
         </div>

@@ -38,10 +38,10 @@
             <form method="post">
                 <div class="form-row">
                     <div class="col-md-12">
-                        <input type="text" name="name" class="form-control form-control-lg flat-input" placeholder="이름을 입력하세요">
+                        <input type="text" name="userName" class="form-control form-control-lg flat-input" placeholder="이름을 입력하세요">
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="phone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
+                        <input type="text" name="userPhone" class="form-control form-control-lg flat-input" placeholder="휴대폰 번호를 입력하세요('-' 제외)" >
                     </div>
                     <input type="submit" class="btn btn-lg btn-block btn-login" value="아이디 찾기"></button>
                 </div>
