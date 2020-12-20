@@ -26,7 +26,7 @@
 
     <!-- Template Main CSS File -->
     <link href="<c:url value="/user_assets/css/login.css"/>" rel="stylesheet">
-
+     
 </head>
 <body>
 <!-- Container -->
