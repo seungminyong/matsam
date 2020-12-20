@@ -1,19 +1,21 @@
 package kr.or.matsam.user.entity;
 
 public class UserAuth {
-	private String email;
-	private String nickname;
-	
-	public String getEmail() {
-		return email;
+	private String userEmail;
+	private String userNicName;
+
+	public String getUserEmail() {
+		return userEmail;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
-	public String getNickname() {
-		return nickname;
+	public String getUserNicName() {
+		return userNicName;
 	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+
+	public void setUserNicName(String userNicName) {
+		this.userNicName = userNicName;
 	}
 }

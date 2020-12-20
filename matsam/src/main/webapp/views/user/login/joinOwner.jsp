@@ -243,22 +243,22 @@ function auto(){
 
     <!-- Favicons -->
     
-    <link href="<c:url value="/user_assets/img/favicon.png"/>" rel="icon">
-    <link href="<c:url value="/user_assets/img/apple-touch-icon.png"/>" rel="apple-touch-icon">
+    <link href="<c:url value="/assets/img/favicon.png"/>" rel="icon">
+    <link href="<c:url value="/assets/img/apple-touch-icon.png"/>" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="<c:url value="/user_assets/vendor/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/user_assets/vendor/icofont/icofont.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/user_assets/vendor/boxicons/css/boxicons.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/user_assets/vendor/animate.css/animate.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/user_assets/vendor/owl.carousel/assets/owl.carousel.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/user_assets/vendor/venobox/venobox.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/vendor/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/vendor/icofont/icofont.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/vendor/boxicons/css/boxicons.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/vendor/animate.css/animate.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/vendor/owl.carousel/assets/owl.carousel.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/vendor/venobox/venobox.css"/>" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="<c:url value="/user_assets/css/join.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/css/join.css"/>" rel="stylesheet">
 
 
 </head>
@@ -307,7 +307,7 @@ function auto(){
         <div>
             <h3 class="join_title"><label for="nickname">닉네임</label></h3>
             <span class="box int_name" id="nicknamebox">
-                        <input type="text" id="nickname" name="nickname" class="int" maxlength="20" onkeyup="nicknameCheckFunction()" autocomplete="off" placeholder="2 ~ 20 글자로 입력 해주세요"/>
+                        <input type="text" id="nickname" name="userNicName" class="int" maxlength="20" onkeyup="nicknameCheckFunction()" autocomplete="off" placeholder="2 ~ 20 글자로 입력 해주세요"/>
                     </span>
             <span class="error_next_box" id="nicknameCheckMessage"></span>
         </div>

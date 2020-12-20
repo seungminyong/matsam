@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/* 레이아웃 틀 */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: #fff;
+}
+
+label{
+    margin : 0px;
+}
+
+#logo {
+    width: 240px;
+    height: 44px;
+    cursor: pointer;
+}
+
+
+#wrapper {
+    position: relative;
+    height: 100%;
+}
+
+#content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 460px;
+}
+
+.joinform {
+   width: 500px;
+   height: 100%;
+   margin: 0 auto;
+   padding: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* 입력폼 */
+
+
+h3 {
+    margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.box {
+    display: block;
+    width: 100%;
+    height: 51px;
+    border : 1px solid #333;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+}
+
+.res_explain{
+	
+	display: block;
+    width: 100%;
+    height: 200px;
+    border : 1px solid #333;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+	
+}
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+}
+
+input[type="time"] {
+	width : 160px;
+	
+}
+
+
+input {
+
+}
+
+.box.int_id {
+    padding-right: 110px;
+}
+
+.box.int_pass {
+    padding-right: 40px;
+}
+
+.box.int_pass_check {
+    padding-right: 40px;
+}
+
+.step_url {
+    /*@naver.com*/
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 15px;
+    color: #8e8e8e;
+}
+
+.pswdImg {
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+#phone ,#service_wrap, #menu_ch {
+    display: table;
+    width: 100%;
+}
+
+.spliting{
+	display: table-cell;
+    width: 147px;
+    vertical-align: middle;
+	
+}
+
+.spliting_m{
+	display: table-cell;
+    width: 147px;
+	
+}
+
+.spliting_e{
+	 display: table-cell;
+    width: 147px;
+}
+
+.spliting_m,.spliting_e{
+	 padding-left: 10px;
+}
+
+#pk{
+	display: table-cell;
+    width: 147px;
+    vertical-align: middle;	
+}
+
+
+#kz{
+	display: table-cell;
+    width: 147px;
+}
+
+#sk{
+	
+	 display: table-cell;
+    width: 147px;
+}
+
+#kz,#sk{
+	
+	 padding-left: 10px;
+
+}
+
+#mc1,#mc2,#mc3,#mc4,#mc5,#mc6,#mc7,#mc8,#mc9,#mc10{
+	display: table-cell;
+    width: 147px;
+    padding-left: 10px;
+	
+}
+
+#mc11,#mc12,#mc13,#mc14,#mc15,#mc16,#mc17,#mc18,#mc19,#mc20{
+	display: table-cell;
+    width: 147px;
+    padding-left: 10px;
+	
+}
+
+#mc21,#mc22,#mc23,#mc24,#mc25,#mc26,#mc27,#mc28,#mc29,#mc30{
+	display: table-cell;
+    width: 147px;
+    padding-left: 10px;
+	
+}
+
+input[type="checkbox"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+ input[type="checkbox"]+label {
+	display: inline-block;
+	position: relative;
+	padding-left: 26px;
+	cursor: pointer;
+}
+
+input[type="checkbox"]+label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 3px;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+} 
+/* 보여질 부분의 스타일을 추가하면 된다. */
+.wrap input[type="checkbox"]:checked+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	background-color: #777;
+}
+
+
+select {
+    width: 100%;
+    height: 29px;
+    font-size: 15px;
+    background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
+    background-size: 20px 8px;
+    -webkit-appearance: none;
+    display: inline-block;
+    text-align: start;
+    border: none;
+    cursor: default;
+}
+
+/* 에러메세지 */
+
+.error_next_box {
+    margin-top: 9px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+#alertTxt {
+    position: absolute;
+    top: 19px;
+    right: 38px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+/* 버튼 */
+
+.btn_area {
+    margin: 30px 0 91px;
+}
+
+#btnJoin {
+    width: 100%;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+#btnmodify{
+	 width: 500px;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    font-weight: 400;
+	
+}
+
+.join_title {
+    font-size : 17px;
+    margin : 0;
+    margin-top : 10px;
+    padding : 0px;
+}
+
+
