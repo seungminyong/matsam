@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.matsam.reser.detail.service.impl.ReserDetailMapper">
+    <select id="getMaxNo" resultType="java.lang.String">
+        SELECT  max(detail_serial_num)
+        FROM    reser_detail_tb
+    </select>
+
+    <insert id="insert" parameterType="kr.or.matsam.reser.detail.entity.ReserDetailVO">
+        INSERT INTO reser_detail_tb(
+            detail_serial_num,
+            reser_serial_num,
+            menuSerialNo,
+            amount_price
+        ) VALUES (
+            #{detailSerialNo},
+            #{reserSerialNo},
+            #{menuSerialNo},
+            #{amountPrice}
+        )
+    </insert>
+    <select id="selectByReser" resultType="kr.or.matsam.reser.detail.entity.ReserDetailVO"
+            parameterType="java.lang.String">
+        SELECT      detail_serial_num as detailSerialNo,
+                    reser_serial_num  as reserSerialNo,
+                    menuSerialNo as menuSerialNo,
+                    amount_price as amountPrice
+        FROM        reser_detail_tb
+        WHERE       reser_serial_num = #{reserSerialNo}
+    </select>
+</mapper>

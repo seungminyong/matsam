@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.matsam.board.service.impl.BoardMapper">
+    <insert id="insert" parameterType="kr.or.matsam.board.entity.BoardVO">
+        INSERT INTO board_tb(
+        board_serial_no,
+        user_serial_no,
+        user_email,
+        board_cate_cd,
+        board_title,
+        board_content,
+        reg_date
+        ) VALUES (
+        #{boardSerialNo},
+        #{userSerialNo},
+        #{userEmail},
+        #{label},
+        #{boardTitle},
+        #{boardContent},
+        sysdate
+        )
+    </insert>
+    <update id="modify" parameterType="kr.or.matsam.board.entity.BoardVO">
+        UPDATE  board_tb
+        SET     board_title = #{boardTitle},
+                board_cate_cd = #{label},
+                board_content = #{boardContent},
+                update_date = sysdate
+        WHERE   board_serial_no = #{boardSerialNo}
+    </update>
+
+    <delete id="delete" parameterType="kr.or.matsam.board.entity.BoardVO"></delete>
+
+    <select id="listAll" resultType="kr.or.matsam.board.entity.BoardVO">
+        SELECT   board_serial_no as boardSerialNo,
+                 user_serial_no as userSerialno,
+                 user_email as userEmail,
+                 board_cate_cd as label,
+                 (
+                    SELECT  comm_name
+                    FROM    common_cd_tb ct
+                    WHERE   ct.comm_cd = bt.board_cate_cd
+                 ) as value,
+                 board_title as boardTitle,
+                 board_content as boardContent,
+                 reg_date as regDate,
+                 update_date as updateDate
+        FROM     board_tb bt
+        order by reg_date
+    </select>
+    <select id="detail" resultType="kr.or.matsam.board.entity.BoardVO"
+            parameterType="java.lang.String">
+        SELECT   board_serial_no as boardSerialNo,
+                 board_cate_cd as label,
+                 board_title as boardTitle,
+                 board_content as boardContent
+        FROM     board_tb
+        WHERE    board_serial_no = #{boardSerialNo}
+    </select>
+    <select id="selectByCateCd" resultType="kr.or.matsam.board.entity.BoardVO"
+            parameterType="java.lang.String">
+         SELECT  board_serial_no as boardSerialNo,
+                 user_serial_no as userSerialno,
+                 user_email as userEmail,
+                 board_cate_cd as label,
+                 (
+                    SELECT  comm_name
+                    FROM    common_cd_tb ct
+                    WHERE   ct.comm_cd = bt.board_cate_cd
+                 ) as value,
+                 board_title as boardTitle,
+                 board_content as boardContent,
+                 reg_date as regDate,
+                 update_date as updateDate
+         FROM    board_tb bt
+         WHERE   bt.board_cate_cd = #{cateCd}
+         ORDER BY reg_date
+    </select>
+    <select id="selectByCateName" resultType="kr.or.matsam.board.entity.BoardVO"
+            parameterType="java.lang.String"></select>
+
+    <select id="selectMaxNo" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT  MAX(board_serial_no)
+        FROM    board_tb
+    </select>
+</mapper>
